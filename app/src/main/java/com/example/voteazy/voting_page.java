@@ -1,6 +1,7 @@
 package com.example.voteazy;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,10 @@ public class voting_page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voting_page);
+
+
+//        getWindow().setStatusBarColor(ContextCompat.getColor(getBaseContext(),R.color.primary));
+
         final RecyclerView recyclerView = findViewById(R.id.recyclerCandidate);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

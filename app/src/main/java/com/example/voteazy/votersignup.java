@@ -46,7 +46,7 @@ public class votersignup extends AppCompatActivity {
 //                    Toast.makeText(getApplicationContext(),"true",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Enter validate Aadhar number.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Enter valid Aadhar number.",Toast.LENGTH_SHORT).show();
                 }
             }
         });

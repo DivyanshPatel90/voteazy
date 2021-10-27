@@ -42,71 +42,40 @@
         app:layout_constraintTop_toBottomOf="@+id/candidate_profile_img"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/candidate_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_border2"
-        android:hint="@string/enter_name"
-        android:padding="11dp"
-        android:paddingStart="17dp"
-        android:layout_marginTop="21dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/candidate_form_title"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent=".90"
-        tools:ignore="RtlSymmetry" />
 
-    <EditText
-        android:id="@+id/partyname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:background="@drawable/input_border2"
-        android:hint="@string/party_name"
-        android:padding="11dp"
-        android:paddingStart="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/candidate_name"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent=".90" />
-
-    <EditText
+    <TextView
         android:id="@+id/about"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:background="@drawable/input_border2"
-        android:hint="About"
         android:padding="11dp"
         android:paddingStart="17dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/partyname"
+        app:layout_constraintTop_toBottomOf="@id/candidate_form_title"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent=".90" />
 
+
     <Button
-        android:id="@+id/candidateActionbtn"
+
+        android:id="@+id/closebtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_bg2"
-        android:text="@string/add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/about"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent=".30"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        />
+        android:background="@drawable/button_bg2"
+        android:text="@string/close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/about"
+        app:layout_constraintTop_toBottomOf="@+id/about"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintWidth_percent=".30" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,12 +21,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecyclerVotingpageAdadpter  extends RecyclerView.Adapter<RecyclerVotingpageAdadpter.ViewHolder> {
+public class RecyclerVotingpageAdadpter extends RecyclerView.Adapter<RecyclerVotingpageAdadpter.ViewHolder> {
 
 
-    Context context ;
+    Context context;
     ArrayList<CandidateModel> arrCandidates;
-    RecyclerVotingpageAdadpter(Context context, ArrayList<CandidateModel> arrCandidates){
+    int tempPosition = -1;
+    LinearLayout templlrow;
+    ImageView tempcandidateimg;
+    TextView nametxt;
+    TextView partytxt;
+
+    RecyclerVotingpageAdadpter(Context context, ArrayList<CandidateModel> arrCandidates) {
         this.context = context;
         this.arrCandidates = arrCandidates;
     }
@@ -33,13 +40,13 @@ public class RecyclerVotingpageAdadpter  extends RecyclerView.Adapter<RecyclerVo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.candidate_row,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.candidate_row, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
-        return  viewHolder;
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         holder.imgCandidate.setImageResource(arrCandidates.get(position).img);
         holder.txtName.setText(arrCandidates.get(position).name);
         holder.txtParty.setText(arrCandidates.get(position).party);
@@ -47,17 +54,53 @@ public class RecyclerVotingpageAdadpter  extends RecyclerView.Adapter<RecyclerVo
         holder.llRow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 holder.imgCandidate.setImageResource(R.drawable.check);
+
+                if (tempPosition != -1) {
+
+                    templlrow.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    tempcandidateimg.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    nametxt.setTextColor(Color.parseColor("#000000"));
+                    partytxt.setTextColor(Color.parseColor("#000000"));
+                }
+
+                holder.llRow.setBackgroundColor(Color.parseColor("#4CAF50"));
+                holder.imgCandidate.setBackgroundColor(Color.parseColor("#4CAF50"));
+                holder.txtName.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.txtParty.setTextColor(Color.parseColor("#FFFFFF"));
+
+                templlrow = holder.llRow;
+                nametxt = holder.txtName;
+                partytxt = holder.txtParty;
+                tempcandidateimg = holder.imgCandidate;
+                tempPosition = 0;
+
             }
 
         });
 
-        holder.llRow.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.llRow.setOnLongClickListener(
+                new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                return false;
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.aboutcandidate);
+                final TextView title = dialog.findViewById(R.id.candidate_form_title);
+                final  TextView aboutcandidate = dialog.findViewById(R.id.about);
+                Button btnclose =dialog.findViewById(R.id.closebtn);
+                title.setText(arrCandidates.get(position).name);
+                aboutcandidate.setText(arrCandidates.get(position).about);
+
+                btnclose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+                return true;
             }
         });
+
     }
 
 
@@ -66,11 +109,12 @@ public class RecyclerVotingpageAdadpter  extends RecyclerView.Adapter<RecyclerVo
         return arrCandidates.size();
     }
 
-    public class  ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtName, txtParty;
         ImageView imgCandidate;
         LinearLayout llRow;
-        public  ViewHolder(View itemView){
+
+        public ViewHolder(View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.txtName);
             txtParty = itemView.findViewById(R.id.txtParty);

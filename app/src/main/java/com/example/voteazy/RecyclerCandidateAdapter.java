@@ -45,16 +45,22 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
         holder.llRow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.candidate_form);
                 final EditText candidateName = dialog.findViewById(R.id.candidate_name);
                 final EditText partyName = dialog.findViewById(R.id.partyname);
+                final EditText aboutcandidate = dialog.findViewById( R.id.about);
+
                 Button btnAction = dialog.findViewById(R.id.candidateActionbtn);
                 TextView title =dialog.findViewById(R.id.candidate_form_title);
                 title.setText("Update Candidate");
                 btnAction.setText("Update");
                 candidateName.setText((arrCandidates.get(position)).name);
                 partyName.setText((arrCandidates.get(position)).party);
+                aboutcandidate.setText(arrCandidates.get(position).about);
+
+
                 btnAction.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -72,6 +78,7 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
                         else{
                             Toast.makeText(context, "Please Enter Party Name", Toast.LENGTH_SHORT).show();
                         }
+
                         arrCandidates.set(position,new CandidateModel( arrCandidates.get(position).img,name,party));
                         notifyItemChanged(position);
                         dialog.dismiss();
