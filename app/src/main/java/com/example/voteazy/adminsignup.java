@@ -40,15 +40,18 @@ public class adminsignup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Aadhar number check;
-                String num = aadharadmin.getText().toString();
-                boolean result = Verhoeff.validateVerhoeff(num);
-                String  msg = String.valueOf(result);
-                if(msg == "true"){
-//                    Toast.makeText(getApplicationContext(),"true",Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    Toast.makeText(getApplicationContext(),"Enter valid Aadhar number.",Toast.LENGTH_SHORT).show();
-                }
+//                String num = aadharadmin.getText().toString();
+//                boolean result = Verhoeff.validateVerhoeff(num);
+//                String  msg = String.valueOf(result);
+//                if(msg == "true"){
+////                    Toast.makeText(getApplicationContext(),"true",Toast.LENGTH_SHORT).show();
+//                }
+//                else{
+//                    Toast.makeText(getApplicationContext(),"Enter valid Aadhar number.",Toast.LENGTH_SHORT).show();
+//                }
+
+                Intent intent = new Intent(getBaseContext(),result_page.class);
+                startActivity(intent);
             }
         });
 

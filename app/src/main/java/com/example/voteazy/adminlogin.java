@@ -74,5 +74,6 @@ public class adminlogin extends AppCompatActivity {
         voterphone.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         voterOTP.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         newusertext.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
+
     }
 }

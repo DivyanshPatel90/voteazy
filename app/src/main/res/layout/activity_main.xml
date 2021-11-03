@@ -34,6 +34,7 @@
         android:textSize="32sp"
         android:textStyle="bold" />
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -71,9 +72,9 @@
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:background="@drawable/button_bg1"
+            android:background="@drawable/button_bg3"
             android:text="admin"
-            android:textColor="@color/white"
+            android:textColor="@color/primary"
             android:textSize="18sp" />
 
     </LinearLayout>

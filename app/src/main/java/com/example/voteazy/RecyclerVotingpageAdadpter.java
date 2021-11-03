@@ -47,6 +47,7 @@ public class RecyclerVotingpageAdadpter extends RecyclerView.Adapter<RecyclerVot
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+
         holder.imgCandidate.setImageResource(arrCandidates.get(position).img);
         holder.txtName.setText(arrCandidates.get(position).name);
         holder.txtParty.setText(arrCandidates.get(position).party);
