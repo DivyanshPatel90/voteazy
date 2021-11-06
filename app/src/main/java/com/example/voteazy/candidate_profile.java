@@ -52,6 +52,7 @@ public class candidate_profile extends AppCompatActivity {
                 btnAction.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+
                         String name = "",party = "",about = "";
                         if(!candidateName.getText().toString().equals("")){
                             name  = candidateName.getText().toString();

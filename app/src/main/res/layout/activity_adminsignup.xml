@@ -68,44 +68,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:autofillHints=""
-            android:background="@drawable/input_border"
-            android:ems="10"
-            android:hint="Phone number"
             android:inputType="phone"
-            android:paddingStart="20dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            tools:ignore="RtlSymmetry" />
-
-        <EditText
-            android:id="@+id/otp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
             android:autofillHints=""
             android:background="@drawable/input_border"
-            android:ems="10"
-            android:hint="OTP"
-            android:inputType="number"
+            android:hint="Phone number"
+            android:maxLength="10"
             android:paddingStart="20dp"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             tools:ignore="RtlSymmetry" />
-
-        <TextView
-            android:id="@+id/resendotp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingEnd="20dp"
-            android:text="Resend OTP"
-            android:textAlignment="viewEnd"
-            android:textColor="@color/primary_dark"
-            android:textSize="18sp"
-            tools:ignore="RtlCompat" />
 
 
         <Button
@@ -117,6 +88,7 @@
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:text="Sign up"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:layout_marginTop="5dp"

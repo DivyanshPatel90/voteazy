@@ -7,17 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class voterlogin extends AppCompatActivity {
 
     Button btnvoterlogin;
     TextView signupvoter;
     TextView logintext;
-    TextView sendotptxt;
     TextView newusertext;
     EditText voterphone;
-    EditText voterOTP;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +28,35 @@ public class voterlogin extends AppCompatActivity {
         btnvoterlogin = findViewById(R.id.voterloginbtn);
         signupvoter = findViewById(R.id.votersignup);
         logintext = findViewById(R.id.Welcome);
-        sendotptxt = findViewById(R.id.resendotp);
         voterphone = findViewById(R.id.voterPhone);
-        voterOTP = findViewById(R.id.otp);
         newusertext = findViewById(R.id.text);
+        final ProgressBar progressBar = findViewById(R.id.progressbar);
 
         float v = 0;
 
 
-       btnvoterlogin.setOnClickListener(new View.OnClickListener() {
+        btnvoterlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), voting_page.class);
+
+
+                if(voterphone.getText().toString().trim().isEmpty()){
+                    Toast.makeText(getBaseContext(),"Enter mobile number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                progressBar.setVisibility(View.VISIBLE);
+                btnvoterlogin.setVisibility(View.INVISIBLE);
+
+
+
+
+
+
+                Intent intent = new Intent(getBaseContext(), voterotpverification.class);
+                intent.putExtra("mobile",voterphone.getText().toString());
                 startActivity(intent);
+
             }
         });
 
@@ -57,28 +74,21 @@ public class voterlogin extends AppCompatActivity {
         btnvoterlogin.setTranslationY(300);
         signupvoter.setTranslationY(300);
         logintext.setTranslationY(300);
-        sendotptxt.setTranslationY(300);
         voterphone.setTranslationY(300);
-        voterOTP.setTranslationY(300);
         newusertext.setTranslationY(300);
 
 
         btnvoterlogin.setAlpha(v);
         signupvoter.setAlpha(v);
         logintext.setAlpha(v);
-        sendotptxt.setAlpha(v);
         voterphone.setAlpha(v);
-        voterOTP.setAlpha(v);
         newusertext.setAlpha(v);
 
         btnvoterlogin.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         signupvoter.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         logintext.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
-        sendotptxt.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         voterphone.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
-        voterOTP.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         newusertext.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
-
 
 
     }

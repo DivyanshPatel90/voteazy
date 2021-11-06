@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".result_page"></activity>
+        <activity android:name=".adminpage"></activity>
+        <activity android:name=".adminotpverification" />
+        <activity android:name=".voterotpverification" />
+        <activity android:name=".result_page" />
         <activity android:name=".voterphoto" />
         <activity android:name=".voting_page" />
         <activity android:name=".candidate_profile" />

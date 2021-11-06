@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -48,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:foregroundGravity="bottom"
         android:gravity="bottom"
         android:orientation="vertical"
@@ -69,49 +70,42 @@
             android:paddingStart="20dp"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            android:maxLength="10"
+            />
 
-        <EditText
-            android:id="@+id/otp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints=""
-            android:background="@drawable/input_border"
-            android:ems="10"
-            android:hint="OTP"
-            android:inputType="number"
-            android:paddingStart="20dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            tools:ignore="RtlSymmetry" />
 
-        <TextView
-            android:id="@+id/resendotp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:paddingEnd="20dp"
-            android:text="Resend OTP"
-            android:textAlignment="viewEnd"
-            android:textColor="@color/primary_dark"
-            android:textSize="18sp"
-            tools:ignore="RtlCompat" />
 
-        <Button
-            android:id="@+id/adminloginbtn"
+
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/button_bg1"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="LOGIN"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/adminloginbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_bg1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Get OTP"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

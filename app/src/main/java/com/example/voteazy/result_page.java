@@ -20,7 +20,6 @@ public class result_page extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL,false);
         mrecylerview.setLayoutManager(gridLayoutManager);
         mrecylerview.setHasFixedSize(true);
-
         adapter = new RecyclerResultpageAdapter(this,candidate_profile.arrCandidates);
         mrecylerview.setAdapter(adapter);
     }

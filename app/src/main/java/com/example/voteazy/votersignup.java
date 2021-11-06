@@ -14,10 +14,8 @@ public class votersignup extends AppCompatActivity {
     Button btnvotersignup;
     TextView loginvoter;
     TextView signuptext;
-    TextView sendotptxt;
     TextView alreadyusertext;
     EditText voterphone;
-    EditText voterOTP;
     EditText voterAadhar;
     float v = 0;
 
@@ -29,10 +27,8 @@ public class votersignup extends AppCompatActivity {
         btnvotersignup = findViewById(R.id.votersignupbtn);
         loginvoter  = findViewById(R.id.voterlogin);
         signuptext  = findViewById(R.id.Welcome);
-        sendotptxt = findViewById(R.id.resendotp);
         alreadyusertext = findViewById(R.id.text);
         voterphone = findViewById(R.id.voterPhone);
-        voterOTP = findViewById(R.id.otp);
         voterAadhar = findViewById(R.id.voteraadhar);
 
         btnvotersignup.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +44,7 @@ public class votersignup extends AppCompatActivity {
                 else{
                     Toast.makeText(getApplicationContext(),"Enter valid Aadhar number.",Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
@@ -63,9 +60,7 @@ public class votersignup extends AppCompatActivity {
         btnvotersignup.setTranslationY(300);
         loginvoter.setTranslationY(300);
         signuptext.setTranslationY(300);
-        sendotptxt.setTranslationY(300);
         voterphone.setTranslationY(300);
-        voterOTP.setTranslationY(300);
         alreadyusertext.setTranslationY(300);
         voterAadhar.setTranslationY(300);
 
@@ -73,18 +68,14 @@ public class votersignup extends AppCompatActivity {
         btnvotersignup.setAlpha(v);
         loginvoter.setAlpha(v);
         signuptext.setAlpha(v);
-        sendotptxt.setAlpha(v);
         voterphone.setAlpha(v);
-        voterOTP.setAlpha(v);
         alreadyusertext.setAlpha(v);
         voterAadhar.setAlpha(v);
 
         btnvotersignup.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         loginvoter.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         signuptext.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
-        sendotptxt.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         voterphone.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
-        voterOTP.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         alreadyusertext.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         voterAadhar.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
     }
