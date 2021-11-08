@@ -1,5 +1,6 @@
 package com.example.voteazy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +11,14 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
+
+import java.security.AuthProvider;
+import java.util.concurrent.TimeUnit;
 
 public class voterlogin extends AppCompatActivity {
 
@@ -31,31 +40,55 @@ public class voterlogin extends AppCompatActivity {
         voterphone = findViewById(R.id.voterPhone);
         newusertext = findViewById(R.id.text);
         final ProgressBar progressBar = findViewById(R.id.progressbar);
-
         float v = 0;
 
-
-        btnvoterlogin.setOnClickListener(new View.OnClickListener() {
+       btnvoterlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-                if(voterphone.getText().toString().trim().isEmpty()){
-                    Toast.makeText(getBaseContext(),"Enter mobile number",Toast.LENGTH_SHORT).show();
+                if (voterphone.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(getBaseContext(), "Enter mobile number", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 progressBar.setVisibility(View.VISIBLE);
                 btnvoterlogin.setVisibility(View.INVISIBLE);
 
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        "+91" + voterphone.getText().toString(),
+                        60,
+                        TimeUnit.SECONDS,
+                        voterlogin.this,
+
+                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                                progressBar.setVisibility(View.GONE);
+                                btnvoterlogin.setVisibility(View.VISIBLE);
+                            }
+
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e) {
+                                progressBar.setVisibility(View.GONE);
+                                btnvoterlogin.setVisibility(View.VISIBLE);
+                                Toast.makeText(voterlogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                progressBar.setVisibility(View.GONE);
+                                btnvoterlogin.setVisibility(View.VISIBLE);
+                                Intent intent = new Intent(getBaseContext(), voterotpverification.class);
+                                intent.putExtra("mobile", voterphone.getText().toString());
+                                intent.putExtra("varificationId", verificationId);
+                                startActivity(intent);
+                            }
 
 
+                        }
+                );
 
-
-
-                Intent intent = new Intent(getBaseContext(), voterotpverification.class);
-                intent.putExtra("mobile",voterphone.getText().toString());
-                startActivity(intent);
 
             }
         });

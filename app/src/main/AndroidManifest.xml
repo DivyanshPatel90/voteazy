@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".adminpage"></activity>
+        <activity android:name=".adminpage" />
         <activity android:name=".adminotpverification" />
         <activity android:name=".voterotpverification" />
         <activity android:name=".result_page" />
@@ -20,7 +20,9 @@
         <activity android:name=".adminlogin" />
         <activity android:name=".votersignup" />
         <activity android:name=".voterlogin" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
