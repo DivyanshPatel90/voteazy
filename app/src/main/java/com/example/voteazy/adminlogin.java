@@ -94,6 +94,15 @@ public class adminlogin extends AppCompatActivity {
             }
         });
 
+
+//        btnadminlogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getBaseContext(),adminpage.class));
+//            }
+//        });
+
+
         signupadmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

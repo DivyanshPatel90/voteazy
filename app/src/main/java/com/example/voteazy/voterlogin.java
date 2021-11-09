@@ -93,6 +93,12 @@ public class voterlogin extends AppCompatActivity {
             }
         });
 
+//       btnvoterlogin.setOnClickListener(new View.OnClickListener() {
+//           @Override
+//           public void onClick(View view) {
+//               startActivity(new Intent(getBaseContext(),voting_page.class));
+//           }
+//       });
 
         signupvoter.setOnClickListener(new View.OnClickListener() {
             @Override

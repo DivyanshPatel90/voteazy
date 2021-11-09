@@ -31,7 +31,7 @@ public class voterphoto extends AppCompatActivity {
                 Intent i = new Intent(getBaseContext(),MainActivity.class);
                 startActivity(i);
             }
-        },10000);
+        },5000);
 
 
     }
