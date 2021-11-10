@@ -11,7 +11,7 @@
     android:elevation="30dp"
     >
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/candidate_profile_img"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -21,7 +21,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:civ_border_color="@color/accent"
+        app:civ_border_width="2dp"
+
+        />
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:id="@+id/profilechangebtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/candidate_profile_img"
+        app:layout_constraintEnd_toEndOf="@+id/candidate_profile_img"
+        android:src="@drawable/ic_baseline_add_24"
+        android:contentDescription="TODO"
+        android:focusable="true"
+        app:tint="@null"
+        />
+
+
+
 
     <TextView
         android:id="@+id/candidate_form_title"

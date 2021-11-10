@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="7dp"
         app:cardUseCompatPadding="true"
+
         >
         <LinearLayout
             android:id="@+id/llRow"
@@ -18,13 +19,17 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:padding="11dp">
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
+
                 android:id="@+id/imgCandidate"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@color/white"
                 android:src="@drawable/avatar"
-                android:contentDescription="@string/candidate_image" />
+                android:contentDescription="@string/candidate_image"
+                app:civ_border_color="@color/accent"
+                app:civ_border_width="2dp"
+
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

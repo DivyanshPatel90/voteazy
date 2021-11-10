@@ -42,63 +42,64 @@ public class voterlogin extends AppCompatActivity {
         final ProgressBar progressBar = findViewById(R.id.progressbar);
         float v = 0;
 
-       btnvoterlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                if (voterphone.getText().toString().trim().isEmpty()) {
-                    Toast.makeText(getBaseContext(), "Enter mobile number", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                progressBar.setVisibility(View.VISIBLE);
-                btnvoterlogin.setVisibility(View.INVISIBLE);
-
-                PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                        "+91" + voterphone.getText().toString(),
-                        60,
-                        TimeUnit.SECONDS,
-                        voterlogin.this,
-
-                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                            @Override
-                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                                progressBar.setVisibility(View.GONE);
-                                btnvoterlogin.setVisibility(View.VISIBLE);
-                            }
-
-                            @Override
-                            public void onVerificationFailed(@NonNull FirebaseException e) {
-                                progressBar.setVisibility(View.GONE);
-                                btnvoterlogin.setVisibility(View.VISIBLE);
-                                Toast.makeText(voterlogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-
-                            @Override
-                            public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                progressBar.setVisibility(View.GONE);
-                                btnvoterlogin.setVisibility(View.VISIBLE);
-                                Intent intent = new Intent(getBaseContext(), voterotpverification.class);
-                                intent.putExtra("mobile", voterphone.getText().toString());
-                                intent.putExtra("varificationId", verificationId);
-                                startActivity(intent);
-                            }
-
-
-                        }
-                );
-
-
-            }
-        });
-
 //       btnvoterlogin.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//           public void onClick(View view) {
-//               startActivity(new Intent(getBaseContext(),voting_page.class));
-//           }
-//       });
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//                if (voterphone.getText().toString().trim().isEmpty()) {
+//                    Toast.makeText(getBaseContext(), "Enter mobile number", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                progressBar.setVisibility(View.VISIBLE);
+//                btnvoterlogin.setVisibility(View.INVISIBLE);
+//
+//                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+//                        "+91" + voterphone.getText().toString(),
+//                        60,
+//                        TimeUnit.SECONDS,
+//                        voterlogin.this,
+//
+//                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+//                            @Override
+//                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+//                                progressBar.setVisibility(View.GONE);
+//                                btnvoterlogin.setVisibility(View.VISIBLE);
+//                            }
+//
+//                            @Override
+//                            public void onVerificationFailed(@NonNull FirebaseException e) {
+//                                progressBar.setVisibility(View.GONE);
+//                                btnvoterlogin.setVisibility(View.VISIBLE);
+//                                Toast.makeText(voterlogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                            }
+//
+//                            @Override
+//                            public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+//                                progressBar.setVisibility(View.GONE);
+//                                btnvoterlogin.setVisibility(View.VISIBLE);
+//                                Intent intent = new Intent(getBaseContext(), voterotpverification.class);
+//                                intent.putExtra("mobile", voterphone.getText().toString());
+//                                intent.putExtra("varificationId", verificationId);
+//                                startActivity(intent);
+//                            }
+//
+//
+//                        }
+//                );
+//
+//
+//            }
+//        });
+
+
+       btnvoterlogin.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               startActivity(new Intent(getBaseContext(),voting_page.class));
+           }
+       });
 
         signupvoter.setOnClickListener(new View.OnClickListener() {
             @Override

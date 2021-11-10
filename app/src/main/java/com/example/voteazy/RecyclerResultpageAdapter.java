@@ -39,7 +39,7 @@ public class RecyclerResultpageAdapter extends  RecyclerView.Adapter<RecyclerRes
     @Override
     public void onBindViewHolder(@NonNull RecyclerResultpageAdapter.ViewHolder holder, int position) {
         holder.txtName.setText(arrCandidates.get(position).name);
-        holder.imgCandidate.setImageResource(arrCandidates.get(position).img);
+        holder.imgCandidate.setImageURI( arrCandidates.get(position).img);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class RecyclerResultpageAdapter extends  RecyclerView.Adapter<RecyclerRes
         public ViewHolder(View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.candidate_name);
-            imgCandidate = itemView.findViewById(R.id.imgCandidate);
+            imgCandidate = itemView.findViewById(R.id.candidate_profile_img);
             llRow = itemView.findViewById(R.id.llRow);
             votecount = itemView.findViewById(R.id.votecount);
         }

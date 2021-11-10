@@ -1,9 +1,12 @@
 package com.example.voteazy;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -24,6 +31,9 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
 
     Context context ;
     ArrayList<CandidateModel> arrCandidates;
+    Uri tempImg;
+    ImageView profileimg;  // ***
+
     RecyclerCandidateAdapter(Context context, ArrayList<CandidateModel> arrCandidates){
         this.context = context;
         this.arrCandidates = arrCandidates;
@@ -38,7 +48,8 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        holder.imgCandidate.setImageResource(arrCandidates.get(position).img);
+
+        holder.imgCandidate.setImageURI (arrCandidates.get(position).img);
         holder.txtName.setText(arrCandidates.get(position).name);
         holder.txtParty.setText(arrCandidates.get(position).party);
 
@@ -48,9 +59,16 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
 
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.candidate_form);
+
                 final EditText candidateName = dialog.findViewById(R.id.candidate_name);
                 final EditText partyName = dialog.findViewById(R.id.partyname);
                 final EditText aboutcandidate = dialog.findViewById( R.id.about);
+
+
+
+                profileimg = dialog.findViewById(R.id.candidate_profile_img); //****
+                FloatingActionButton addprofile = dialog.findViewById(R.id.profilechangebtn);//****
+
 
                 Button btnAction = dialog.findViewById(R.id.candidateActionbtn);
                 TextView title =dialog.findViewById(R.id.candidate_form_title);
@@ -59,8 +77,21 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
                 candidateName.setText((arrCandidates.get(position)).name);
                 partyName.setText((arrCandidates.get(position)).party);
                 aboutcandidate.setText(arrCandidates.get(position).about);
+                profileimg.setImageURI(arrCandidates.get(position).img); //******
 
-
+                addprofile.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        ImagePicker.with((Activity) context)
+                                .crop()                    //Crop image(Optional), Check Customization for more option
+                                .compress(1024)            //Final image size will be less than 1 MB(Optional)
+                                .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
+                                .start();
+                    }
+                });
+                
+                
+                
                 btnAction.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -131,4 +162,9 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
             llRow = itemView.findViewById(R.id.llRow);
         }
     }
+
+    
+
 }
+
+

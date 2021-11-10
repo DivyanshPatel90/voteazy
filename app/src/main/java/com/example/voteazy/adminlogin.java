@@ -43,64 +43,64 @@ public class adminlogin extends AppCompatActivity {
         final ProgressBar progressBar = findViewById(R.id.progressbar);
         float v = 0;
 
-        btnadminlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                if(adminphone .getText().toString().trim().isEmpty()){
-                    Toast.makeText(getBaseContext(),"Enter Phone Number",Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                progressBar.setVisibility(View.VISIBLE);
-                btnadminlogin.setVisibility(View.INVISIBLE);
-
-                PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                        "+91" + adminphone .getText().toString(),
-                        60,
-                        TimeUnit.SECONDS,adminlogin.this,
-
-                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                            @Override
-                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                                progressBar.setVisibility(View.GONE);
-                                btnadminlogin.setVisibility(View.VISIBLE);
-                            }
-
-                            @Override
-                            public void onVerificationFailed(@NonNull FirebaseException e) {
-                                progressBar.setVisibility(View.GONE);
-                                btnadminlogin.setVisibility(View.VISIBLE);
-                                Toast.makeText(adminlogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-
-                            @Override
-                            public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                                progressBar.setVisibility(View.GONE);
-                                btnadminlogin.setVisibility(View.VISIBLE);
-                                Intent intent = new Intent(getBaseContext(), adminotpverification.class);
-                                intent.putExtra("mobile", adminphone.getText().toString());
-                                intent.putExtra("varificationId", verificationId);
-                                startActivity(intent);
-                            }
-
-
-                        }
-                );
-
-
-
-
-            }
-        });
-
-
 //        btnadminlogin.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                startActivity(new Intent(getBaseContext(),adminpage.class));
+//
+//
+//                if(adminphone .getText().toString().trim().isEmpty()){
+//                    Toast.makeText(getBaseContext(),"Enter Phone Number",Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                progressBar.setVisibility(View.VISIBLE);
+//                btnadminlogin.setVisibility(View.INVISIBLE);
+//
+//                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+//                        "+91" + adminphone .getText().toString(),
+//                        60,
+//                        TimeUnit.SECONDS,adminlogin.this,
+//
+//                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+//                            @Override
+//                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+//                                progressBar.setVisibility(View.GONE);
+//                                btnadminlogin.setVisibility(View.VISIBLE);
+//                            }
+//
+//                            @Override
+//                            public void onVerificationFailed(@NonNull FirebaseException e) {
+//                                progressBar.setVisibility(View.GONE);
+//                                btnadminlogin.setVisibility(View.VISIBLE);
+//                                Toast.makeText(adminlogin.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+//                            }
+//
+//                            @Override
+//                            public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+//                                progressBar.setVisibility(View.GONE);
+//                                btnadminlogin.setVisibility(View.VISIBLE);
+//                                Intent intent = new Intent(getBaseContext(), adminotpverification.class);
+//                                intent.putExtra("mobile", adminphone.getText().toString());
+//                                intent.putExtra("varificationId", verificationId);
+//                                startActivity(intent);
+//                            }
+//
+//
+//                        }
+//                );
+//
+//
+//
+//
 //            }
 //        });
+
+
+        btnadminlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getBaseContext(),adminpage.class));
+            }
+        });
 
 
         signupadmin.setOnClickListener(new View.OnClickListener() {

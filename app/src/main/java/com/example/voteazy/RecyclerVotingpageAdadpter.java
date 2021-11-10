@@ -1,10 +1,12 @@
 package com.example.voteazy;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,9 +48,9 @@ public class RecyclerVotingpageAdadpter extends RecyclerView.Adapter<RecyclerVot
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
-        holder.imgCandidate.setImageResource(arrCandidates.get(position).img);
+        holder.imgCandidate.setImageURI(arrCandidates.get(position).img);
         holder.txtName.setText(arrCandidates.get(position).name);
         holder.txtParty.setText(arrCandidates.get(position).party);
 
@@ -85,11 +87,16 @@ public class RecyclerVotingpageAdadpter extends RecyclerView.Adapter<RecyclerVot
             public boolean onLongClick(View v) {
                 final Dialog dialog = new Dialog(context);
                 dialog.setContentView(R.layout.aboutcandidate);
+
                 final TextView title = dialog.findViewById(R.id.candidate_form_title);
                 final  TextView aboutcandidate = dialog.findViewById(R.id.about);
+                final ImageView profile = dialog.findViewById(R.id.candidate_profile_img);
+
                 Button btnclose =dialog.findViewById(R.id.closebtn);
+
                 title.setText(arrCandidates.get(position).name);
                 aboutcandidate.setText(arrCandidates.get(position).about);
+                profile.setImageURI(arrCandidates.get(position).img);
 
                 btnclose.setOnClickListener(new View.OnClickListener() {
                     @Override
