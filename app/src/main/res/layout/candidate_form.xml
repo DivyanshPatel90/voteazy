@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:background="@drawable/input_border2"
-        android:hint="About"
+        android:hint="@string/about"
         android:padding="11dp"
         android:paddingStart="17dp"
         app:layout_constraintBottom_toBottomOf="parent"

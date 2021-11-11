@@ -19,7 +19,6 @@
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:contentDescription="@string/logo"
         app:srcCompat="@drawable/otpimg" />
 
 
@@ -30,7 +29,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="OTP Verification"
+        android:text="@string/otp_verification"
         android:textColor="@color/primary_text"
         android:textSize="28sp"
         android:textStyle="bold" />
@@ -175,10 +174,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:background="@drawable/button_bg1"
+                android:background="@drawable/button_bg5"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:text="verify"
+                android:text="@string/verify"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -207,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:text="Resend OTP"
+                android:text="@string/resend_otp"
                 android:textAlignment="center"
                 android:textColor="@color/secondary_text"
                 android:textSize="18sp"

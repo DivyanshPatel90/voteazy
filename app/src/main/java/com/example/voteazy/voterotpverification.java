@@ -22,6 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
@@ -31,15 +32,17 @@ public class voterotpverification extends AppCompatActivity {
     Button verifybtn;
     private EditText inputcode1, inputcode2, inputcode3, inputcode4, inputcode5, inputcode6;
     private String verificationid;
+    DatabaseReference voterdbref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voterotpverification);
-
         verifybtn = findViewById(R.id.votervarifybtn);
         final ProgressBar progressBar = findViewById(R.id.progressbar);
         verificationid = getIntent().getStringExtra("varificationId");
+        voterdbref  = FirebaseDatabase.getInstance().getReference().child("Voters");
+
 
 
         TextView txtmoblie = findViewById(R.id.txtphone);
@@ -93,6 +96,12 @@ public class voterotpverification extends AppCompatActivity {
                                   progressBar.setVisibility(View.GONE);
                                   verifybtn.setVisibility(View.VISIBLE);
                                   if(task.isSuccessful()){
+
+
+                                      if(!getIntent().getStringExtra("aadhar").trim().isEmpty()){
+                                          insertVoterData();
+                                      }
+
                                       Intent intent = new Intent(getBaseContext(), voting_page.class);
                                       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                       startActivity(intent);
@@ -250,5 +259,12 @@ public class voterotpverification extends AppCompatActivity {
         });
     }
 
+//Function for inserting Data in Realtime Database
+    private void insertVoterData(){
+        String aadhar = getIntent().getStringExtra("aadhar");
+        String phone =   getIntent().getStringExtra("mobile");
+        Voters voters = new Voters(aadhar,phone);
+        voterdbref.child(aadhar).setValue(voters);
+    }
 
 }

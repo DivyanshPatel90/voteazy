@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="voter" >ఓటరు</string>
+    <string name="admin" >అడ్మిన్</string>
+    <string name="l_o_g_i_n">ప్రవేశించండి</string>
+    <string name="s_i_g_n_u_p">చేరడం</string>
+    <string name="welcome_to_voteasy">వోటీసీకి స్వాగతం</string>
+    <string name="voting_made_easy">ఓటింగ్ సులభతరం చేయబడింది</string>
+    <string name="get_otp">OTP పొందండి</string>
+    <string name="new_user">కొత్త యూజర్?</string>
+    <string name="sign_up">చేరడం</string>
+    <string name="otp_verification">OTP ధృవీకరణ</string>
+    <string name="verify">ధృవీకరించండి</string>
+    <string name="resend_otp">OTP ను మళ్ళీ పంపు</string>
+    <string name="conduct_voting">ఓటింగ్ నిర్వహించండి</string>
+    <string name="result">ఫలితం</string>
+    <string name="aadhar_number">ఆధార్ నంబర్</string>
+    <string name="phone_number">ఫోను నంబరు</string>
+    <string name="already_have_an_account">ఖాతా కలిగి ఉన్నారా?</string>
+    <string name="login">ప్రవేశించండి</string>
+    <string name="total_votes">మొత్తం ఓట్లు</string>
+    <string name="thank_you">ధన్యవాదాలు</string>
+</resources>

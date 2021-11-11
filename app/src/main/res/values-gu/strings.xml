@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="voter" >મતદાર</string>
+    <string name="admin" >એડમિન</string>
+    <string name="l_o_g_i_n">પ્રવેશ કરો</string>
+    <string name="s_i_g_n_u_p">સાઇન અપ કરો</string>
+    <string name="welcome_to_voteasy">Voteasy માં આપનું સ્વાગત છે</string>
+    <string name="voting_made_easy">મતદાન સરળ બનાવ્યું</string>
+    <string name="get_otp">OTP મેળવો</string>
+    <string name="new_user">નવા વપરાશકર્તા?</string>
+    <string name="sign_up">સાઇન અપ કરો</string>
+    <string name="otp_verification">OTP ચકાસણી</string>
+    <string name="verify">ચકાસો</string>
+    <string name="resend_otp">OTP ફરીથી મોકલો</string>
+    <string name="conduct_voting">મતદાનનું સંચાલન કરો</string>
+    <string name="result">પરિણામ</string>
+    <string name="aadhar_number">આધાર નંબર</string>
+    <string name="phone_number">ફોન નંબર</string>
+    <string name="already_have_an_account">પહેલેથી જ એકાઉન્ટ છે?</string>
+    <string name="login">પ્રવેશ કરો</string>
+    <string name="total_votes">કુલ મત</string>
+    <string name="thank_you">આભાર</string>
+</resources>

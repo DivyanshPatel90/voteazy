@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="candidate">उम्मीदवार</string>
+    <string name="party_name">दल का नाम</string>
+    <string name="voter" >मतदाता</string>
+    <string name="admin" >व्यवस्थापक</string>
+    <string name="welcome_to_voteasy">वोटेसी में आपका स्वागत है</string>
+    <string name="voting_made_easy">मतदान हुआ आसान</string>
+    <string name="close">बंद करे</string>
+    <string name="add_candidate">उम्मीदवार की प्रोफाइल</string>
+    <string name="l_o_g_i_n">"लॉग इन "</string>
+    <string name="s_i_g_n_u_p">"साइन अप "</string>
+    <string name="candidate_image">उम्मीदवार की छवि</string>
+    <string name="enter_name">नाम दर्ज करें</string>
+    <string name="add">" जोड़ें"</string>
+    <string name="phone_number">फ़ोन नंबर</string>
+    <string name="get_otp">ओटीपी प्राप्त करें</string>
+    <string name="new_user">नया उपयोगकर्ता?</string>
+    <string name="sign_up">साइन अप करें</string>
+    <string name="otp_verification">ओटीपी सत्यापन</string>
+    <string name="verify">सत्यापित करें</string>
+    <string name="resend_otp">ओटीपी पुनः भेजें</string>
+    <string name="conduct_voting">मतदान का संचालन करें</string>
+    <string name="result">परिणाम</string>
+    <string name="aadhar_number">आधार नंबर</string>
+    <string name="already_have_an_account">पहले से एक खाता मौजूद है?</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="total_votes">कुल वोट</string>
+    <string name="thank_you">धन्यवाद।</string>
+    <string name="about">के संबंध में</string>
+    <string name="name">नाम</string>
+
+</resources>

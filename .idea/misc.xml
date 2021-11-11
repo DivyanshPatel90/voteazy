@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg1.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg2.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg3.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg4.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg5.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/aboutcandidate.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminlogin.xml" value="0.22" />
-        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminotpverification.xml" value="0.2" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminotpverification.xml" value="0.1" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminpage.xml" value="0.2" />
-        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminsignup.xml" value="0.2" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminsignup.xml" value="0.1" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_candidate_profile.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_demo.xml" value="0.1859375" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_result_page.xml" value="0.2" />
-        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterlogin.xml" value="0.2" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterlogin.xml" value="0.1" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterotpverification.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterphoto.xml" value="0.1" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_votersignup.xml" value="0.16203703703703703" />

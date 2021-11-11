@@ -3,7 +3,9 @@ package com.example.voteazy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
@@ -27,7 +30,9 @@ public class voterlogin extends AppCompatActivity {
     TextView logintext;
     TextView newusertext;
     EditText voterphone;
-
+    Context context;
+    Resources resources;
+    TextInputLayout textInputLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,7 @@ public class voterlogin extends AppCompatActivity {
         logintext = findViewById(R.id.Welcome);
         voterphone = findViewById(R.id.voterPhone);
         newusertext = findViewById(R.id.text);
+        textInputLayout = findViewById(R.id.textinputlayout);
         final ProgressBar progressBar = findViewById(R.id.progressbar);
         float v = 0;
 
@@ -116,20 +122,91 @@ public class voterlogin extends AppCompatActivity {
         logintext.setTranslationY(300);
         voterphone.setTranslationY(300);
         newusertext.setTranslationY(300);
-
+        textInputLayout.setTranslationY(300);
 
         btnvoterlogin.setAlpha(v);
         signupvoter.setAlpha(v);
         logintext.setAlpha(v);
         voterphone.setAlpha(v);
         newusertext.setAlpha(v);
+        textInputLayout.setAlpha(v);
 
         btnvoterlogin.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         signupvoter.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         logintext.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         voterphone.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
         newusertext.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
+        textInputLayout.animate().translationY(0).alpha(1).setDuration(500).setStartDelay(400).start();
 
 
-    }
-}
+                // Change language
+        int i = (MainActivity.languageselected);
+        if (MainActivity.languages[i].equals("English")) {
+
+            context = LocaleHelper.setLocale(voterlogin.this, "en");
+            resources = context.getResources();
+            logintext.setText(resources.getString(R.string.l_o_g_i_n));
+            voterphone.setHint(resources.getString(R.string.phone_number));
+            btnvoterlogin.setText(resources.getString(R.string.get_otp));
+            newusertext.setText(resources.getString(R.string.new_user));
+            signupvoter.setText(resources.getString(R.string.sign_up));
+        }
+        if (MainActivity.languages[i].equals("हिंदी")) {
+            context = LocaleHelper.setLocale(voterlogin.this, "hi");
+            resources = context.getResources();
+            logintext.setText(resources.getString(R.string.l_o_g_i_n));
+            voterphone.setHint(resources.getString(R.string.phone_number));
+            btnvoterlogin.setText(resources.getString(R.string.get_otp));
+            newusertext.setText(resources.getString(R.string.new_user));
+            signupvoter.setText(resources.getString(R.string.sign_up));
+        }
+
+        if (MainActivity.languages[i].equals("বাংলা")) {
+            context = LocaleHelper.setLocale(voterlogin.this, "bn");
+            resources = context.getResources();
+            logintext.setText(resources.getString(R.string.l_o_g_i_n));
+            voterphone.setHint(resources.getString(R.string.phone_number));
+            btnvoterlogin.setText(resources.getString(R.string.get_otp));
+            newusertext.setText(resources.getString(R.string.new_user));
+            signupvoter.setText(resources.getString(R.string.sign_up));
+        }
+        if (MainActivity.languages[i].equals("मराठी")) {
+            context = LocaleHelper.setLocale(voterlogin.this, "mr");
+            resources = context.getResources();
+            logintext.setText(resources.getString(R.string.l_o_g_i_n));
+            voterphone.setHint(resources.getString(R.string.phone_number));
+            btnvoterlogin.setText(resources.getString(R.string.get_otp));
+            newusertext.setText(resources.getString(R.string.new_user));
+            signupvoter.setText(resources.getString(R.string.sign_up));
+        }
+        if (MainActivity.languages[i].equals("తెలుగు")) {
+            context = LocaleHelper.setLocale(voterlogin.this, "te");
+            resources = context.getResources();
+            logintext.setText(resources.getString(R.string.l_o_g_i_n));
+            voterphone.setHint(resources.getString(R.string.phone_number));
+            btnvoterlogin.setText(resources.getString(R.string.get_otp));
+            newusertext.setText(resources.getString(R.string.new_user));
+            signupvoter.setText(resources.getString(R.string.sign_up));
+        }
+        if (MainActivity.languages[i].equals("தமிழ்")) {
+            context = LocaleHelper.setLocale(voterlogin.this, "ta");
+            resources = context.getResources();
+            logintext.setText(resources.getString(R.string.l_o_g_i_n));
+            voterphone.setHint(resources.getString(R.string.phone_number));
+            btnvoterlogin.setText(resources.getString(R.string.get_otp));
+            newusertext.setText(resources.getString(R.string.new_user));
+            signupvoter.setText(resources.getString(R.string.sign_up));
+        }
+
+        if (MainActivity.languages[i].equals("ગુજરાતી")) {
+            context = LocaleHelper.setLocale(voterlogin.this, "gu");
+            resources = context.getResources();
+            logintext.setText(resources.getString(R.string.l_o_g_i_n));
+            voterphone.setHint(resources.getString(R.string.phone_number));
+            btnvoterlogin.setText(resources.getString(R.string.get_otp));
+            newusertext.setText(resources.getString(R.string.new_user));
+            signupvoter.setText(resources.getString(R.string.sign_up));
+        }
+
+        }
+        }

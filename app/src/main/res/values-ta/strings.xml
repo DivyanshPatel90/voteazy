@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="voter" >வாக்காளர்</string>
+    <string name="admin" >நிர்வாகம்</string>
+    <string name="l_o_g_i_n">உள்நுழைய</string>
+    <string name="s_i_g_n_u_p">பதிவு செய்யவும்</string>
+    <string name="welcome_to_voteasy">Voteasyக்கு வரவேற்கிறோம்</string>
+    <string name="voting_made_easy">வாக்களிப்பது எளிதாகிவிட்டது</string>
+    <string name="get_otp">OTP मिळवा</string>
+    <string name="new_user">புதிய பயனர்?</string>
+    <string name="sign_up">பதிவு செய்யவும்</string>
+    <string name="otp_verification">OTP சரிபார்ப்பு</string>
+    <string name="verify">சரிபார்க்க</string>
+    <string name="resend_otp">OTP ஐ மீண்டும் அனுப்பவும்</string>
+    <string name="conduct_voting">வாக்களிக்கவும்</string>
+    <string name="result">விளைவாக</string>
+    <string name="aadhar_number">ஆதார் எண்</string>
+    <string name="phone_number">தொலைபேசி எண்</string>
+    <string name="already_have_an_account">ஏற்கனவே ஒரு கணக்கு உள்ளதா?</string>
+    <string name="login">உள்நுழைய</string>
+    <string name="total_votes">மொத்த வாக்குகள்</string>
+    <string name="thank_you">நன்றி</string>
+</resources>

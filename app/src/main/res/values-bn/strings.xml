@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="voter" >ভোটার</string>
+    <string name="admin" >অ্যাডমিন</string>
+    <string name="l_o_g_i_n">প্রবেশ করুন</string>
+    <string name="s_i_g_n_u_p">নিবন্ধন করুন</string>
+    <string name="welcome_to_voteasy">Voteasy স্বাগতম</string>
+    <string name="voting_made_easy">ভোট দেওয়া সহজ হয়েছে</string>
+    <string name="get_otp">OTP পান</string>
+    <string name="new_user">নতুন ব্যবহারকারী?</string>
+    <string name="sign_up">নিবন্ধন করুন</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="verify">যাচাই</string>
+    <string name="resend_otp">OTP আবার পাঠান</string>
+    <string name="conduct_voting">ভোট পরিচালনা করুন</string>
+    <string name="result">ফলাফল</string>
+    <string name="aadhar_number">আধার নম্বর</string>
+    <string name="phone_number">ফোন নম্বর</string>
+    <string name="already_have_an_account">ইতিমধ্যে একটি সদস্যপদ আছে?</string>
+    <string name="login">প্রবেশ করুন</string>
+    <string name="total_votes">মোট ভোট</string>
+    <string name="thank_you">ধন্যবাদ</string>
+
+
+</resources>

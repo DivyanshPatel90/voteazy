@@ -1,28 +1,34 @@
 <resources>
-    <string name="app_name">Voteazy</string>
-    <string name="voter" />
-    <string name="admin" />
-    <string name="logo">LOGO</string>
-    <string name="enter_phone_number">Enter phone number</string>
-    <string name="enter_otp">Enter OTP</string>
-    <string name="forgot_password">Forgot password?</string>
 
-
-    <string name="s_t_a_r_t">S T A R T</string>
-    <string name="password">password</string>
-    <string name="mobile_number">Mobile number</string>
-
-    <string name="confirm_password">Confirm Password</string>
-    <string name="l_o_g_i_n">L O G I N</string>
-    <string name="email">Email Id</string>
-
+    <string name="app_name" translatable="false">Voteazy</string>
+    <string name="voter" >Voter</string>
+    <string name="admin" >Admin</string>
+    <string name="close">Close</string>
+    <string name="add_candidate">Candidate\'s Profile</string>
+    <string name="l_o_g_i_n">L o g i n</string>
     <string name="s_i_g_n_u_p">S I G N  U P</string>
-
     <string name="candidate">candidate</string>
     <string name="party_name">Party Name</string>
     <string name="candidate_image">Candidate image</string>
-    <string name="add_candidate">Candidate Profile</string>
     <string name="enter_name">Enter Name</string>
     <string name="add">Add</string>
-    <string name="close">Close</string>
+    <string name="welcome_to_voteasy">Welcome to Voteasy</string>
+    <string name="voting_made_easy">Voting made easy</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="new_user">New user?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="verify">verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="conduct_voting">Conduct voting</string>
+    <string name="result">Result</string>
+    <string name="aadhar_number">Aadhar Number</string>
+    <string name="phone_number">  Phone number</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="total_votes">Total Votes</string>
+    <string name="thank_you">Thank you</string>
+    <string name="about">About</string>
+    <string name="name">Name</string>
+
 </resources>

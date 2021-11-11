@@ -18,7 +18,6 @@
         android:layout_width="500dp"
         android:layout_height="250dp"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:contentDescription="@string/logo"
         android:src="@drawable/adminpageimg" />
 
 
@@ -35,8 +34,8 @@
             android:id="@+id/startvotingbtn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_bg1"
-            android:text="Conduct voting"
+            android:background="@drawable/button_bg5"
+            android:text="@string/conduct_voting"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:layout_marginTop="20dp"
@@ -46,9 +45,9 @@
             android:id="@+id/resultbtn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_bg3"
-            android:text="Result"
-            android:textColor="@color/primary"
+            android:background="@drawable/button_bg2"
+            android:text="@string/result"
+            android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:textAllCaps="false"
             />

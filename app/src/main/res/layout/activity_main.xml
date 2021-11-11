@@ -1,25 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal|center_vertical"
     android:background="#FFFFFF"
-    android:gravity="center|center_horizontal"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingTop="100dp"
     android:paddingBottom="10dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:paddingTop="15dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginEnd="10dp"
+        >
+
+        <TextView
+            android:id="@+id/textviewdialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="English"
+            android:textAlignment="center"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="500dp"
         android:layout_height="250dp"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:contentDescription="@string/logo"
-        app:srcCompat="@drawable/votingimg" />
+        app:srcCompat="@drawable/votingimg"
+        android:layout_marginTop="100dp"/>
 
 
     <TextView
@@ -29,25 +56,26 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Welcome to Voteasy"
+        android:text="@string/welcome_to_voteasy"
         android:textColor="@color/primary"
         android:textSize="32sp"
         android:textStyle="bold" />
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/votingmadeeasytxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="Voting made easy"
-        android:textColor="@color/primary" />
+        android:text="@string/voting_made_easy"
+        android:textColor="@color/primary"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="bottom"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:foregroundGravity="bottom"
         android:gravity="bottom"
 
@@ -62,8 +90,8 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:textAllCaps="false"
-            android:background="@drawable/button_bg1"
-            android:text="Voter"
+            android:background="@drawable/button_bg5"
+            android:text="@string/voter"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
@@ -75,9 +103,10 @@
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             android:background="@drawable/button_bg3"
-            android:text="Admin"
-            android:textColor="@color/primary"
-            android:textSize="18sp" />
+            android:text="@string/admin"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
 
     </LinearLayout>
 
