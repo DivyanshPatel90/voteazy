@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".candidate_profile"
     android:orientation="vertical"
+    android:background="#F5F5F5"
     >
 
     <androidx.recyclerview.widget.RecyclerView

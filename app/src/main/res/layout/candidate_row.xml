@@ -3,14 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="40dp"
 
     >
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="7dp"
+        app:cardCornerRadius="11dp"
         app:cardUseCompatPadding="true"
+        android:elevation="11dp"
+        android:background="#FFFAFA"
 
         >
         <LinearLayout
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:padding="11dp">
+
             <de.hdodenhof.circleimageview.CircleImageView
 
                 android:id="@+id/imgCandidate"

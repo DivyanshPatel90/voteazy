@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="voter" >मतदार</string>
-    <string name="admin" >अॅडमिन</string>
+    <string name="admin" >प्रशासक</string>
     <string name="l_o_g_i_n">लॉगिन करा</string>
     <string name="s_i_g_n_u_p">साइन अप करा</string>
     <string name="welcome_to_voteasy">Voteasy मध्ये आपले स्वागत आहे</string>

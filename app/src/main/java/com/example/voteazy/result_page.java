@@ -6,7 +6,13 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.Adapter;
+import android.widget.TextView;
+
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class result_page extends AppCompatActivity {
     RecyclerView mrecylerview;
@@ -22,6 +28,10 @@ public class result_page extends AppCompatActivity {
         mrecylerview.setHasFixedSize(true);
         adapter = new RecyclerResultpageAdapter(this,candidate_profile.arrCandidates);
         mrecylerview.setAdapter(adapter);
+
+
+
     }
+
 
 }

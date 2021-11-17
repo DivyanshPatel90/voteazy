@@ -4,7 +4,7 @@
     <string name="party_name">दल का नाम</string>
     <string name="voter" >मतदाता</string>
     <string name="admin" >व्यवस्थापक</string>
-    <string name="welcome_to_voteasy">वोटेसी में आपका स्वागत है</string>
+    <string name="welcome_to_voteasy">Voteasy में आपका स्वागत है</string>
     <string name="voting_made_easy">मतदान हुआ आसान</string>
     <string name="close">बंद करे</string>
     <string name="add_candidate">उम्मीदवार की प्रोफाइल</string>

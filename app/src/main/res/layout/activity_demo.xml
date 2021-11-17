@@ -1,37 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Demo">
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:background="@drawable/adminpagebgimg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    tools:context=".MainActivity">
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/voterPhone"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:hint="@string/phone_number"
-        app:startIconDrawable="@drawable/ic_baseline_phone_24"
-        app:endIconMode="clear_text"
-        app:prefixText="+91"
-        app:errorEnabled="true"
-        app:errorIconDrawable="@drawable/ic_baseline_error_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         >
 
-        <com.google.android.material.textfield.TextInputEditText
+        <TextView
+            android:textAlignment="textStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="10"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:text="Election ends in"
+            android:textColor="@color/secondary_text" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/timertxt"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00:00::00"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:textSize="26dp"
+            />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/startvotingbtn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg5"
+            android:text="@string/conduct_voting"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:id="@+id/resultbtn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg2"
+            android:text="@string/result"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -160,6 +160,15 @@ public class adminsignup extends AppCompatActivity {
 //        btnadminsignup.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
+//                Intent intent = new Intent(getBaseContext(), adminpage.class);
+//                startActivity(intent);
+//            }
+//        });
+
+
+//        btnadminsignup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
 //
 //                //Aadhar number check;
 //                String num = aadharadmin.getText().toString();

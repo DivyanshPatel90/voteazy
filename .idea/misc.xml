@@ -8,23 +8,31 @@
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg3.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg4.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg5.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/button_bg6.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/dialogbox_background.xml" value="0.175" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.15925925925925927" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/ic_baseline_delete_outline_24.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/ic_baseline_language_24.xml" value="0.2128205128205128" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.16574074074074074" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/drawable/topcurve.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/aboutcandidate.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminlogin.xml" value="0.22" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminotpverification.xml" value="0.1" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminpage.xml" value="0.2" />
-        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminsignup.xml" value="0.1" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_adminsignup.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_candidate_profile.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_demo.xml" value="0.1859375" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_result_page.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterlogin.xml" value="0.1" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterotpverification.xml" value="0.2" />
-        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterphoto.xml" value="0.1" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voterphoto.xml" value="0.12" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_votersignup.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/activity_voting_page.xml" value="0.1" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/candidate_form.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/candidate_row.xml" value="0.2" />
         <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/candidate_votes.xml" value="0.2" />
+        <entry key="..\:/Users/divya/AndroidStudioProjects/Voteazy/app/src/main/res/layout/language_dialog.xml" value="0.2" />
       </map>
     </option>
   </component>

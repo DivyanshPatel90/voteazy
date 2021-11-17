@@ -2,6 +2,7 @@ package com.example.voteazy;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,13 +11,14 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnvoter;
     Button btnadmin;
-    TextView languagedialog;
+    ImageView languagedialog;
     TextView votingmadeeasytext;
     boolean lang_selected = true;
     Context context;
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         welcome = findViewById(R.id.Welcome);
         votingmadeeasytext = findViewById(R.id.votingmadeeasytxt);
 
+        getWindow().setStatusBarColor(ContextCompat.getColor(getBaseContext(),R.color.accent));
 
         //for changing Languages
         languagedialog.setOnClickListener(new View.OnClickListener() {
@@ -52,13 +55,14 @@ public class MainActivity extends AppCompatActivity {
 
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setIcon(R.drawable.languages);
+
                 builder.setTitle("Select a language").setSingleChoiceItems(languages, checkeditem, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                         languageselected = i;
 
-                        languagedialog.setText(languages[i]);
 
 
                         if (languages[i].equals("English")) {
@@ -76,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                             resources = context.getResources();
                             welcome.setText(resources.getString(R.string.welcome_to_voteasy));
                             btnvoter.setText(resources.getString(R.string.voter));
+                            welcome.setTextSize(resources.getDimension(R.dimen.textsize1));
                             btnadmin.setText(resources.getString(R.string.admin));
                             votingmadeeasytext.setText(resources.getString(R.string.voting_made_easy));
                         }

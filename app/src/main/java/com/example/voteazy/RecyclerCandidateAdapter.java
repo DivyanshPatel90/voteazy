@@ -1,11 +1,14 @@
 package com.example.voteazy;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +28,8 @@ import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandidateAdapter.ViewHolder> {
 
@@ -47,7 +52,7 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
 
         holder.imgCandidate.setImageURI (arrCandidates.get(position).img);
         holder.txtName.setText(arrCandidates.get(position).name);
@@ -57,65 +62,71 @@ public class RecyclerCandidateAdapter extends RecyclerView.Adapter<RecyclerCandi
             @Override
             public void onClick(View v) {
 
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.candidate_form);
+                if(candidate_profile.votingstarted==0){
+                    final Dialog dialog = new Dialog(context);
+//                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    dialog.setContentView(R.layout.candidate_form);
 
-                final EditText candidateName = dialog.findViewById(R.id.candidate_name);
-                final EditText partyName = dialog.findViewById(R.id.partyname);
-                final EditText aboutcandidate = dialog.findViewById( R.id.about);
-
-
-
-                profileimg = dialog.findViewById(R.id.candidate_profile_img); //****
-                FloatingActionButton addprofile = dialog.findViewById(R.id.profilechangebtn);//****
+                    final EditText candidateName = dialog.findViewById(R.id.candidate_name);
+                    final EditText partyName = dialog.findViewById(R.id.partyname);
+                    final EditText aboutcandidate = dialog.findViewById( R.id.about);
 
 
-                Button btnAction = dialog.findViewById(R.id.candidateActionbtn);
-                TextView title =dialog.findViewById(R.id.candidate_form_title);
-                title.setText("Update Candidate");
-                btnAction.setText("Update");
-                candidateName.setText((arrCandidates.get(position)).name);
-                partyName.setText((arrCandidates.get(position)).party);
-                aboutcandidate.setText(arrCandidates.get(position).about);
-                profileimg.setImageURI(arrCandidates.get(position).img); //******
 
-                addprofile.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        ImagePicker.with((Activity) context)
-                                .crop()                    //Crop image(Optional), Check Customization for more option
-                                .compress(1024)            //Final image size will be less than 1 MB(Optional)
-                                .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
-                                .start();
-                    }
-                });
-                
-                
-                
-                btnAction.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                    profileimg = dialog.findViewById(R.id.candidate_profile_img); //****
+                    CircleImageView addprofile = dialog.findViewById(R.id.profilechangebtn);//****
 
-                        String name = "",party = "";
-                        if(!candidateName.getText().toString().equals("")){
-                            name  = candidateName.getText().toString();
+
+                    Button btnAction = dialog.findViewById(R.id.candidateActionbtn);
+                    TextView title =dialog.findViewById(R.id.candidate_form_title);
+                    title.setText("Update Profile");
+                    btnAction.setText("Update");
+                    candidateName.setText((arrCandidates.get(position)).name);
+                    partyName.setText((arrCandidates.get(position)).party);
+                    aboutcandidate.setText(arrCandidates.get(position).about);
+                    profileimg.setImageURI(arrCandidates.get(position).img); //******
+
+                    addprofile.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            ImagePicker.with((Activity) context)
+                                    .crop()                    //Crop image(Optional), Check Customization for more option
+                                    .compress(1024)            //Final image size will be less than 1 MB(Optional)
+                                    .maxResultSize(1080, 1080)    //Final image resolution will be less than 1080 x 1080(Optional)
+                                    .start();
                         }
-                        else{
-                            Toast.makeText(context, "Please Enter Candidate Name", Toast.LENGTH_SHORT).show();
-                        }
-                        if(!candidateName.getText().toString().equals("")){
-                            party = partyName.getText().toString();
-                        }
-                        else{
-                            Toast.makeText(context, "Please Enter Party Name", Toast.LENGTH_SHORT).show();
-                        }
+                    });
 
-                        arrCandidates.set(position,new CandidateModel( arrCandidates.get(position).img,name,party));
-                        notifyItemChanged(position);
-                        dialog.dismiss();
-                    }
-                });
-                dialog.show();
+
+
+                    btnAction.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            String name = "",party = "";
+                            if(!candidateName.getText().toString().equals("")){
+                                name  = candidateName.getText().toString();
+                            }
+                            else{
+                                Toast.makeText(context, "Please Enter Candidate Name", Toast.LENGTH_SHORT).show();
+                            }
+                            if(!candidateName.getText().toString().equals("")){
+                                party = partyName.getText().toString();
+                            }
+                            else{
+                                Toast.makeText(context, "Please Enter Party Name", Toast.LENGTH_SHORT).show();
+                            }
+
+
+
+                            arrCandidates.set(position,new CandidateModel( arrCandidates.get(position).img,name,party));
+                            notifyItemChanged(position);
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+                }
+
             }
 
         });

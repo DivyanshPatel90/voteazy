@@ -4,7 +4,7 @@
     <string name="voter" >Voter</string>
     <string name="admin" >Admin</string>
     <string name="close">Close</string>
-    <string name="add_candidate">Candidate\'s Profile</string>
+    <string name="add_candidate">Candidate Profile</string>
     <string name="l_o_g_i_n">L o g i n</string>
     <string name="s_i_g_n_u_p">S I G N  U P</string>
     <string name="candidate">candidate</string>

@@ -7,22 +7,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".voterphoto"
-    android:background="@color/white">
+    android:background="@drawable/lastpageimg"
+    >
 
-    <TextView
-        android:id="@+id/thanku"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottiethank"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/thank_you"
-        android:textColor="@color/primary"
-        android:textSize="35sp"
-        android:textStyle="bold" />
+        android:layout_marginBottom="40dp"
+        app:lottie_rawRes="@raw/thankyou"
+        app:lottie_loop="false"
+        />
+
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
@@ -32,5 +35,7 @@
         android:elevation="10dp"
         app:lottie_autoPlay="true"
         app:lottie_rawRes="@raw/lottievote" />
+
+
 
 </RelativeLayout>

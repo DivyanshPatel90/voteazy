@@ -7,12 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".candidate_profile"
     android:orientation="vertical"
+    android:background="#F5F5F5"
     >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCandidate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cancleelectionbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="159dp"
+        android:src="@drawable/ic_baseline_delete_outline_24"
+        app:backgroundTint="@color/red" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/startelectionbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/rocket"
+        app:backgroundTint="@color/accent" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -23,10 +52,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="21dp"
-        android:layout_marginEnd="21dp"
+        android:layout_marginEnd="19dp"
         android:layout_marginBottom="21dp"
         android:src="@drawable/add"
         app:backgroundTint="@color/primary" />
+
 
 
 </RelativeLayout>
